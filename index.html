@@ -1,0 +1,14 @@
+---
+layout: default
+title: Engineering Notes
+permalink: /
+---
+<section class="hero"><p class="eyebrow">CLOUD · PLATFORM · DEVOPS · AI INFRASTRUCTURE</p>
+<h1>Engineering systems<br><em>that scale.</em></h1>
+<p class="lead">I'm Alexandre Monteiro, a Cloud & Platform Engineer sharing practical notes on infrastructure, automation, reliability and modern engineering.</p>
+<a class="button" href="{{ '/en/articles/' | relative_url }}">Explore articles ↗</a> <a href="{{ '/pt/artigos/' | relative_url }}">Ler em português</a>
+<p class="eyebrow">INDEPENDENT TECHNICAL NOTES · PT / EN</p></section>
+<section><p class="eyebrow">LATEST WRITING</p><h2>Ideas into practice.</h2><div class="grid">
+{% assign featured = site.posts | sort: "date" | reverse %}
+{% for post in featured limit:4 %}<article class="card"><p class="eyebrow">{{ post.category }} · {{ post.lang | upcase }}</p><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p>{{ post.description }}</p><a href="{{ post.url | relative_url }}">Read article →</a></article>{% endfor %}
+</div></section>
