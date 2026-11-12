@@ -1,0 +1,6 @@
+---
+layout: default
+---
+<article class="post"><a href="{% if page.lang == 'pt' %}{{ '/pt/artigos/' | relative_url }}{% else %}{{ '/en/articles/' | relative_url }}{% endif %}">← Back to articles</a>
+<p class="eyebrow">{{ page.category }} · {{ page.lang | upcase }} · {{ page.date | date: "%d %b %Y" }}</p>
+<h1>{{ page.title }}</h1><p class="lead">{{ page.description }}</p><div class="prose">{{ content }}</div></article>
