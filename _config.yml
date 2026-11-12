@@ -1,0 +1,19 @@
+title: "Alexandre Monteiro | Engineering Notes"
+description: "Cloud, Platform Engineering, DevOps and AI Infrastructure."
+url: "https://alemonteiroficial.github.io"
+baseurl: "/blog"
+lang: "en"
+author:
+  name: "Alexandre Monteiro"
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+exclude: [README.md, Gemfile, Gemfile.lock, vendor]
