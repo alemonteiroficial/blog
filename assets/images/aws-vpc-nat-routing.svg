@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+<title id="title">Private subnet outbound traffic through a NAT Gateway</title><desc id="desc">An EC2 instance in a private subnet sends outbound traffic to a NAT Gateway in a public subnet, then through an Internet Gateway to the internet. Return traffic follows the established connection.</desc>
+<defs><style>text{font-family:Arial,sans-serif;fill:#e8eef5}.label{font-size:22px;font-weight:bold}.small{font-size:18px}.muted{fill:#a8b6c8}.arrow{stroke:#58a6ff;stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round}.return{stroke:#3fb950;stroke-width:4;fill:none;stroke-dasharray:10 8;stroke-linecap:round}</style><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L9 3 L0 6" fill="#58a6ff"/></marker><marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L9 3 L0 6" fill="#3fb950"/></marker></defs>
+<rect width="1200" height="520" rx="24" fill="#0b1220"/><text x="50" y="55" font-size="30" font-weight="bold">Outbound internet access from a private subnet</text>
+<rect x="35" y="95" width="330" height="330" rx="18" fill="#1b3154" stroke="#58a6ff" stroke-width="2"/><text x="60" y="135" class="label">Private subnet</text><text x="60" y="165" class="small muted">10.0.11.0/24</text>
+<rect x="85" y="225" width="230" height="95" rx="12" fill="#254d7a"/><text x="200" y="263" text-anchor="middle" class="label">EC2 instance</text><text x="200" y="292" text-anchor="middle" class="small">Private IPv4</text>
+<rect x="435" y="95" width="330" height="330" rx="18" fill="#123b34" stroke="#3fb950" stroke-width="2"/><text x="460" y="135" class="label">Public subnet</text><text x="460" y="165" class="small muted">10.0.1.0/24</text>
+<rect x="485" y="225" width="230" height="95" rx="12" fill="#1f6f5c"/><text x="600" y="263" text-anchor="middle" class="label">NAT Gateway</text><text x="600" y="292" text-anchor="middle" class="small">Elastic IP</text>
+<rect x="835" y="95" width="330" height="330" rx="18" fill="#26364b" stroke="#d2a8ff" stroke-width="2"/><text x="860" y="135" class="label">Internet</text>
+<circle cx="1000" cy="270" r="72" fill="#3a2d54" stroke="#d2a8ff" stroke-width="2"/><path d="M950 270 H1050 M1000 220 V320 M965 235 Q1000 270 1035 305 M1035 235 Q1000 270 965 305" stroke="#d2a8ff" stroke-width="3" fill="none"/><text x="1000" y="375" text-anchor="middle" class="small">External destination</text>
+<path d="M315 245 H485" class="arrow" marker-end="url(#a)"/><path d="M715 245 H835" class="arrow" marker-end="url(#a)"/>
+<text x="400" y="220" text-anchor="middle" class="small">1 · Route to NAT</text><text x="775" y="220" text-anchor="middle" class="small">2 · Route to IGW</text>
+<path d="M835 300 H715" class="return" marker-end="url(#g)"/><path d="M485 300 H315" class="return" marker-end="url(#g)"/>
+<text x="600" y="470" text-anchor="middle" class="small muted">Return traffic is associated with the connection initiated by the private instance</text>
+<text x="600" y="498" text-anchor="middle" class="small muted">Required routes: private subnet → NAT Gateway · public subnet → Internet Gateway</text>
+</svg>
