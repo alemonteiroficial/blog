@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang }}">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+{% seo %}<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head><body>
+<header><a class="brand" href="{{ '/' | relative_url }}"><b>AM</b> Alexandre Monteiro <small>ENGINEERING NOTES</small></a>
+<nav><a href="{{ '/en/articles/' | relative_url }}">Articles</a><a href="{{ '/pt/artigos/' | relative_url }}">Artigos</a><a href="{{ '/about/' | relative_url }}">About</a><a href="https://github.com/alemonteiroficial">GitHub ↗</a></nav></header>
+<main>{{ content }}</main>
+<footer><strong>AM.</strong> Engineering Notes · Cloud · Platform · DevOps · AI Infrastructure</footer>
+</body></html>
