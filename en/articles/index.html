@@ -1,0 +1,7 @@
+---
+layout: default
+title: Articles
+permalink: /en/articles/
+---
+<section class="hero"><p class="eyebrow">KNOWLEDGE BASE · ENGLISH</p><h1>Articles<em>.</em></h1><p class="lead">Practical notes on cloud, platforms, automation and reliable systems.</p></section>
+<section class="article-list">{% assign posts = site.posts | where: "lang", "en" | sort: "date" | reverse %}{% for post in posts %}<article class="card"><p class="eyebrow">{{ post.date | date: "%b %d, %Y" }} · {{ post.category }}</p><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2><p>{{ post.description }}</p><a href="{{ post.url | relative_url }}">Read article →</a></article>{% endfor %}</section>
