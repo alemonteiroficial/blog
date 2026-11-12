@@ -1,0 +1,7 @@
+---
+layout: default
+title: Artigos
+permalink: /pt/artigos/
+---
+<section class="hero"><p class="eyebrow">BASE DE CONHECIMENTO · PORTUGUÊS</p><h1>Artigos<em>.</em></h1><p class="lead">Conteúdo prático sobre cloud, plataformas, automação e sistemas confiáveis.</p></section>
+<section class="article-list">{% assign posts = site.posts | where: "lang", "pt" | sort: "date" | reverse %}{% for post in posts %}<article class="card"><p class="eyebrow">{{ post.date | date: "%d/%m/%Y" }} · {{ post.category }}</p><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2><p>{{ post.description }}</p><a href="{{ post.url | relative_url }}">Ler artigo →</a></article>{% endfor %}</section>
